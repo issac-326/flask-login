@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="welcome">
+    <h1>Bienvenido a Mi App</h1>
+    {% if current_user.is_authenticated %}
+        <p>¡Hola, {{ current_user.username }}!</p>
+    {% else %}
+        <p>Por favor, inicia sesión o regístrate para continuar.</p>
+    {% endif %}
+</div>
+{% endblock %}
